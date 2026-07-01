@@ -1,0 +1,48 @@
+Pasos para subir archivos de más de 100mb a git:
+
+abre la terminal en la raiz de la carpeta clonada,
+escribe los siguientes comandos: 
+
+cd C:\Users\J.P\Documents\GitHub\MMA-Boxing
+
+git lfs install
+
+git lfs track "Build/MMABoxing-html5.data.gz"
+
+git add .gitattributes
+
+git rm --cached Build/MMABoxing-html5.data.gz
+
+git add Build/MMABoxing-html5.data.gz
+
+git add .
+
+git check-attr filter Build/MMABoxing-html5.data.gz
+
+git lfs ls-files
+
+git commit -m "Add large file using Git LFS"
+
+git push origin main
+
+
+
+
+
+
+
+version segura:
+
+cd C:\Users\J.P\Documents\GitHub\Air-Combat
+
+git lfs install
+
+git lfs track "Build/AirCombat-HTML5.data"
+
+git add .gitattributes
+
+git add Build/AirCombat-HTML5.data
+
+git commit -m "Add build file"
+
+git push origin main
